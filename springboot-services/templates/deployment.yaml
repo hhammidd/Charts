@@ -23,17 +23,17 @@ spec:
             - name: URL
               valueFrom:
                 secretKeyRef:
-                  name: micro-geo-db
+                  name: {{ .Values.secretKeyRef.name }}
                   key: url
             - name: DB_USERNAME
               valueFrom:
                 secretKeyRef:
-                  name: micro-geo-db
+                  name: {{ .Values.secretKeyRef.name }}
                   key: db-username
             - name: DB_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: micro-geo-db
+                  name: {{ .Values.secretKeyRef.name }}
                   key: db-password
           ports:
             - containerPort: {{ .Values.port }}

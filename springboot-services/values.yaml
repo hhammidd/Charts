@@ -20,3 +20,7 @@ image: ##DOCKER_REGISTRY##/hhssaaffii/micro-geo
 
 artifactory:
   name: artifactory
+
+secretKeyRef:
+  name: <db-name>
+
