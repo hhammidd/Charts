@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: geo-sale-app-svc
+  name: {{ .Values.service.name }}
 spec:
   selector:
-    app: geo-sale-app
+    app: {{ .Values.appName }}
   ports:
     - protocol: TCP
       port: 80
       targetPort: 80
-      nodePort: 31003
+      nodePort: {{ .Values.service.nodePort }} # TODO make it dynamic
   type: NodePort

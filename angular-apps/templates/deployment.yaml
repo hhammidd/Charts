@@ -1,19 +1,19 @@
 apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
-  name: geosaleapp
+  name: {{ .Values.appName }}
 spec:
   selector:
     matchLabels:
-      app: geo-sale-app
+      app: {{ .Values.appName }}
   replicas: 1 # tells deployment to run 2 pods matching the template
   template:
     metadata:
       labels:
-        app: geo-sale-app
+        app: {{ .Values.appName }}
     spec:
       containers:
-        - name: geo-sale-app
-          image: geo-sale-app:v2
+        - name: {{ .Values.appName }}
+          image: {{ .Values.appName }}:{{ .Values.tag }}
           ports:
             - containerPort: 80
