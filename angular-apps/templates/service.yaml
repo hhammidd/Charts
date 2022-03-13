@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: geo-sale-app-svc
+spec:
+  selector:
+    app: geo-sale-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 31003
+  type: NodePort
