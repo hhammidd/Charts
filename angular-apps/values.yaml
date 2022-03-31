@@ -6,7 +6,7 @@ service:
   name: micro-geo-svc
   nodePort: 31003
 
-ImageName: hhssaaffii/geo-sale-app
+ImageName: geo-sale-app
 
 appName: geo-sale-app
 
