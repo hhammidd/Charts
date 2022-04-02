@@ -6,8 +6,8 @@ spec:
   selector:
     app: {{ .Values.appName }}
   ports:
-#    - protocol: TCP
+    - protocol: TCP
       port: 80
-#      targetPort: 80
-#      nodePort: {{ .Values.service.nodePort }} # TODO make it dynamic
-#  type: NodePort
+      targetPort: 80
+      nodePort: {{ .Values.service.nodePort }} # TODO make it dynamic
+  type: NodePort
