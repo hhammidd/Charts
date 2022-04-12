@@ -8,8 +8,8 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-#    - host: {{ .Values.host }}
-    - host: evbricks.com
+    - host: {{ .Values.host }}
+#    - host: evbricks.com
       http:
         paths:
           - path: /
