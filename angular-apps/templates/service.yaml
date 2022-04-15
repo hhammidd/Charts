@@ -1,4 +1,4 @@
-apiVersion: v1 # TODO use below one thi is test
+apiVersion: v1
 kind: Service
 metadata:
   name: {{ .Values.service.name }}
@@ -6,12 +6,9 @@ spec:
   selector:
     app: {{ .Values.appName }}
   ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 80
-      nodePort: {{ .Values.service.nodePort }}
-  type: NodePort
-#apiVersion: v1
+    - port: 80
+
+#apiVersion: v1 # TODO use below one thi is test
 #kind: Service
 #metadata:
 #  name: {{ .Values.service.name }}
@@ -19,8 +16,8 @@ spec:
 #  selector:
 #    app: {{ .Values.appName }}
 #  ports:
-##    - protocol: TCP
-#    - port: 80
-##      targetPort: 80
-##      nodePort: {{ .Values.service.nodePort }} # TODO make it dynamic
-##  type: NodePort
+#    - protocol: TCP
+#      port: 80
+#      targetPort: 80
+#      nodePort: {{ .Values.service.nodePort }}
+#  type: NodePort
