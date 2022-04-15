@@ -5,6 +5,7 @@ service:
   type: NodePort
   name: micro-geo-svc
   nodePort: 31003
+  servicePort: 80
 
 ImageName: geo-sale-app
 

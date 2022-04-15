@@ -6,7 +6,7 @@ spec:
   selector:
     app: {{ .Values.appName }}
   ports:
-    - port: 80 # TODO should be exposeImagePort?
+    - port: {{ .Values.service.servicePort }}
 
 #apiVersion: v1 # TODO use below one thi is test
 #kind: Service
