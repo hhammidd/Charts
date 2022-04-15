@@ -12,6 +12,7 @@ appName: geo-sale-app
 
 host: evbricks.com
 path:
+exposeImagePort: 8080
 
 artifactory:
   name: artifactory
