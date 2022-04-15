@@ -1,15 +1,12 @@
----
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-#  namespace: {{ .Values.namespace }}
   name: {{ .Values.appName }}-ingress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
     - host: {{ .Values.host }}
-#    - host: evbricks.com
       http:
         paths:
           - path: /{{ .Values.path }}
@@ -19,4 +16,3 @@ spec:
                 name: {{ .Values.service.name }}
                 port:
                   number: 80
-#                  number: {{ .Values.portNumber }}
