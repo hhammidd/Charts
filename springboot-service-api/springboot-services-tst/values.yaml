@@ -10,6 +10,7 @@ service:
 ImageName: hhssaaffii/micro-geo
 
 port: 8092
+portTest: 8094
 
 fullName: micro-geo
 

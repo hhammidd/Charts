@@ -35,4 +35,4 @@ spec:
                   name: {{ .Values.secretKeyRef.name }}
                   key: db-password
           ports:
-            - containerPort: {{ .Values.port }}
+            - containerPort: {{ .Values.portTest }}

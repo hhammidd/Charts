@@ -10,6 +10,6 @@ spec:
     app: {{ .Values.appName }}
   ports:
     - protocol: TCP
-      port: {{ .Values.portNumber }}
+      port: {{ .Values.portTest }}
       nodePort: {{ .Values.service.nodePortTst }} # TODO make it dynamic
 
