@@ -3,26 +3,26 @@ tag: 1
 #namespace: default
 service:
   type: NodePort
-  name: micro-geo-svc
+  name: sale-point-service-svc
   nodePortTst: 30188
   nodePortPrd: 30183
 
-ImageName: hhssaaffii/micro-geo
+ImageName: hhssaaffii/sale-point-service
 
-port: 8092
-portTest: 8094
+port: 8089
+portTest: 8095
 
-fullName: micro-geo
+fullName: sale-point-service
 
-appName: micro-geo
+appName: sale-point-service
 
-host: test.evbricks.com
+host: evbricks.com
 
-image: ##DOCKER_REGISTRY##/hhssaaffii/micro-geo
+image: ##DOCKER_REGISTRY##/hhssaaffii/sale-point-service
 
 artifactory:
   name: artifactory
 
 secretKeyRef:
-  name: <db-name>
+  name: sale-point-service-db
 

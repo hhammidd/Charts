@@ -9,13 +9,14 @@ service:
 
 ImageName: hhssaaffii/micro-geo
 
-port: 8092
+port: 8089
+portTest: 8095
 
 fullName: micro-geo
 
 appName: micro-geo
 
-portNumber: 8092
+
 host: hello-world-7.pvt
 
 image: ##DOCKER_REGISTRY##/hhssaaffii/micro-geo
