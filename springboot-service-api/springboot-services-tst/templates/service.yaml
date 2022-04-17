@@ -11,5 +11,5 @@ spec:
   ports:
     - protocol: TCP
       port: {{ .Values.portNumber }}
-      nodePort: {{ .Values.service.nodePort }} # TODO make it dynamic
+      nodePort: {{ .Values.service.nodePortTst }} # TODO make it dynamic
 
