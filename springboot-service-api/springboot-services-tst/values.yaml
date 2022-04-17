@@ -1,0 +1,27 @@
+replicaCount: 1
+tag: 1
+#namespace: default
+service:
+  type: NodePort
+  name: micro-geo-svc
+  nodePort: 30188
+
+ImageName: hhssaaffii/micro-geo
+
+port: 8092
+
+fullName: micro-geo
+
+appName: micro-geo
+
+portNumber: 8092
+host: test.evbricks.com
+
+image: ##DOCKER_REGISTRY##/hhssaaffii/micro-geo
+
+artifactory:
+  name: artifactory
+
+secretKeyRef:
+  name: <db-name>
+

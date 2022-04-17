@@ -1,0 +1,39 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+#  namespace: {{ .Values.namespace }}
+  name: {{ .Values.appName }}
+  labels:
+    app: {{ .Values.appName }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Values.appName }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.appName }}
+    spec:
+      containers:
+        - name: {{ .Values.appName }}
+          image: {{.Values.ImageName}}:{{ .Values.tag }}
+          env:
+            - name: URL
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.secretKeyRef.name }}
+                  key: url
+            - name: DB_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.secretKeyRef.name }}
+                  key: db-username
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.secretKeyRef.name }}
+                  key: db-password
+          ports:
+            - containerPort: {{ .Values.port }}
