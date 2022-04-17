@@ -16,7 +16,6 @@ fullName: micro-geo
 
 appName: micro-geo
 
-portNumber: 8092
 host: test.evbricks.com
 
 image: ##DOCKER_REGISTRY##/hhssaaffii/micro-geo
